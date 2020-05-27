@@ -14,6 +14,9 @@ class MergeActivity : AppCompatActivity() {
     private val personAdapter by lazy {
         PersonAdapter()
     }
+    private val personAdapter2 by lazy {
+        PersonAdapter()
+    }
     private val personTitleAdapter by lazy {
         PersonTitleAdapter()
     }
@@ -28,7 +31,8 @@ class MergeActivity : AppCompatActivity() {
         supportActionBar?.title = "Minha Agenda"
 
 
-        val mergeAdapter = MergeAdapter(personTitleAdapter,personAdapter,personBottomAdapter)
+        val mergeAdapter = MergeAdapter(personTitleAdapter,personAdapter,personBottomAdapter,
+            personTitleAdapter,personAdapter2)
 
 
         binding.recyclerMerge.apply {
@@ -38,6 +42,7 @@ class MergeActivity : AppCompatActivity() {
         }
 
         personAdapter.addItem(getData())
+        personAdapter2.addItem(getData())
 
     }
 
