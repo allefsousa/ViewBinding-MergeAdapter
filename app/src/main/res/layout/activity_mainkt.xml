@@ -8,12 +8,12 @@
     tools:context=".viewbinding.MainActivityKT">
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_comprar"
+        android:id="@+id/btn_agenda"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginRight="18dp"
         android:layout_marginLeft="18dp"
-        android:text="Comprar"
+        android:text="Ver Agenda"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.developer.allef.viewbindingmergeadapater.R;
 import com.developer.allef.viewbindingmergeadapater.databinding.ActivityMainjvBinding;
+import com.developer.allef.viewbindingmergeadapater.mergeadapter.MergeActivity;
 
 public class MainActivityJV extends AppCompatActivity {
 
@@ -19,13 +20,12 @@ public class MainActivityJV extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityMainjvBinding binding = ActivityMainjvBinding.inflate(LayoutInflater.from(this));
         setContentView(binding.getRoot());
-        getSupportActionBar().setTitle("Confirmar Compra");
+        getSupportActionBar().setTitle("Ir Para Agenda");
 
-        binding.btnConfirmarCompra.setOnClickListener(new View.OnClickListener() {
+        binding.btnAgenda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivityJV.this, "Compra efetuada", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivityJV.this,MainActivityKT.class));
+                startActivity(new Intent(MainActivityJV.this, MergeActivity.class));
                 finish();
             }
         });

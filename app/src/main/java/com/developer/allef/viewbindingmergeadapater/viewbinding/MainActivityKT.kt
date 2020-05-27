@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.developer.allef.viewbindingmergeadapater.R
 import com.developer.allef.viewbindingmergeadapater.databinding.ActivityMainktBinding
+import kotlinx.android.synthetic.main.activity_mainjv.*
 import kotlinx.android.synthetic.main.activity_mainkt.*
 
 class MainActivityKT : AppCompatActivity() {
@@ -14,9 +15,9 @@ class MainActivityKT : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainktBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.title = "Comprar"
+        supportActionBar?.title = "Agenda"
 
-        binding.btnComprar.setOnClickListener {
+        binding.btnAgenda.setOnClickListener {
             startActivity(Intent(this,MainActivityJV::class.java))
             finish()
         }
